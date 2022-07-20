@@ -17,7 +17,7 @@ export default defineConfig({
         name: 'ToDo',
         short_name: 'ToDo',
         description: 'ToDo app.',
-        theme_color: '#ffffff'
+        theme_color: 'khaki'
       }
     })
   ],

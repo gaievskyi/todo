@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  color: ${colors.tones.dark};
 `
 
 const Button = styled.button<{ isVisible: boolean }>`
