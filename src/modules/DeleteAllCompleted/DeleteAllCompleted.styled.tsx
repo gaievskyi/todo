@@ -18,6 +18,7 @@ const Button = styled.button<{ isVisible: boolean }>`
   padding: 15px;
   border: 2px solid ${colors.tones.dark};
   cursor: pointer;
+  color: ${colors.tones.dark};
   opacity: 0;
   visibility: hidden;
 
