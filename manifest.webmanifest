@@ -1,1 +1,1 @@
-{"name":"ToDo","short_name":"ToDo","start_url":"./","display":"standalone","background_color":"#ffffff","lang":"en","scope":".","description":"ToDo app.","theme_color":"khaki"}
+{"name":"ToDo","short_name":"ToDo","start_url":"./","display":"standalone","background_color":"#ffffff","lang":"en","scope":"/todo/","description":"ToDo app.","theme_color":"khaki"}
