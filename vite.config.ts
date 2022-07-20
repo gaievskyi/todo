@@ -13,7 +13,7 @@ export default defineConfig({
       injectRegister: 'auto',
       manifest: {
         start_url: './',
-        scope: '.',
+        scope: '/todo/',
         name: 'ToDo',
         short_name: 'ToDo',
         description: 'ToDo app.',
