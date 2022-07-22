@@ -33,6 +33,7 @@ const Container = styled.div<{
       bottom: 20px;
       border: 2px solid ${
         variant === 'success' ? colors.tones.dark : colors.error
+        // eslint-disable-next-line indent
       };
     `
   }}

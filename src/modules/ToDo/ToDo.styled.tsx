@@ -52,7 +52,7 @@ const Input = styled.input<{ isCompleted: boolean }>`
   width: 100%;
   height: 100%;
   ${({ isCompleted }) =>
-    'text-decoration: ' + (isCompleted ? 'line-through' : 'none')};
+    `text-decoration: ${isCompleted ? 'line-through' : 'none'}`};
 `
 
 const Checkbox = styled.input<{ type: 'checkbox' }>``
@@ -65,7 +65,7 @@ const DeleteButton = styled.button`
   place-items: center;
 `
 
-export const ToDo = {
+export const Styled = {
   Container,
   Info,
   Actions,

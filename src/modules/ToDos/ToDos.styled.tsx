@@ -30,7 +30,7 @@ const Subtitle = memo(styled.h2`
   margin-bottom: 30px;
 `)
 
-export const ToDos = {
+export const Styled = {
   Title,
   Subtitle,
   Container

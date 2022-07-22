@@ -2,21 +2,21 @@ import { Trash } from 'react-bootstrap-icons'
 import { useTranslation } from 'react-i18next'
 import { useSnackbarStore } from 'components'
 import { colors } from 'theme'
-import { DeleteAllCompleted } from './DeleteAllCompleted.styled'
+import { Styled } from './DeleteAllCompleted.styled'
 
 type DeleteAllCompletedProps = {
   onDeleteSelected: () => void
   isVisible?: boolean
 }
 
-export const DeleteAllCompletedComponent: React.FC<DeleteAllCompletedProps> = ({
+export const DeleteAllCompleted: React.FC<DeleteAllCompletedProps> = ({
   onDeleteSelected,
   isVisible = false
 }) => {
   const { t } = useTranslation()
   const { showSnackbar } = useSnackbarStore()
 
-  const deleteAll = () => {
+  const deleteAllSelected = () => {
     onDeleteSelected()
     showSnackbar({
       variant: 'success',
@@ -25,13 +25,13 @@ export const DeleteAllCompletedComponent: React.FC<DeleteAllCompletedProps> = ({
   }
 
   return (
-    <DeleteAllCompleted.Container>
-      <DeleteAllCompleted.Button onClick={deleteAll} isVisible={isVisible}>
+    <Styled.Container>
+      <Styled.Button onClick={deleteAllSelected} isVisible={isVisible}>
         <>
           <span>{t('deleteAllCompleted.title')}</span>
           <Trash color={colors.tones.dark} size={27} />
         </>
-      </DeleteAllCompleted.Button>
-    </DeleteAllCompleted.Container>
+      </Styled.Button>
+    </Styled.Container>
   )
 }

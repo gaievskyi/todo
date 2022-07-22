@@ -1,28 +1,43 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:react/jsx-runtime"
-  ],
-  "rules": {
-    "react/prop-types": "off",
-    "no-unused-vars": "warn",
-    "react/react-in-jsx-scope": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {
-        "no-undef": "off"
-      }
-    }
-  ],
-  "settings": {
-    "react": {
-      "version": "detect"
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "camelcase": "error",
+      "spaced-comment": "error",
+      "indent": [ "error", 2, { "SwitchCase": 1, "ignoredNodes": ["ConditionalExpression"]} ],
+      "no-duplicate-imports": "error",
+      "quotes": ["error","single"],
+      "semi": ["error","never"]
+    },
+    "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
   }
 }

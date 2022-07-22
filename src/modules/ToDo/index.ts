@@ -1,1 +1,1 @@
-export { ToDoComponent as ToDo } from './ToDo.component'
+export { ToDo } from './ToDo.component'

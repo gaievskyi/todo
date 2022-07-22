@@ -9,6 +9,6 @@ export const Container = styled.div`
   gap: 35px;
 `
 
-export const Empty = {
+export const Styled = {
   Container
 }

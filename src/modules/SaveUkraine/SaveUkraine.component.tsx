@@ -1,8 +1,6 @@
 import Ukraine, { IUkraineOptions } from 'save-ukraine'
 
-export const SaveUkraine = (
-  props: Partial<Omit<IUkraineOptions, 'element'>>
-) => {
+export function SaveUkraine(props: Partial<Omit<IUkraineOptions, 'element'>>) {
   return (
     <div
       ref={(element) => {

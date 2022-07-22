@@ -3,13 +3,13 @@ import { Plus } from 'react-bootstrap-icons'
 import { useTranslation } from 'react-i18next'
 import { useSnackbarStore } from 'components'
 import { colors } from 'theme'
-import { AddToDo } from './AddToDo.styled'
+import { Styled } from './AddToDo.styled'
 
 type AddToDoProps = {
   onAdd: (text: string) => void
 }
 
-const AddToDoComponent: React.FC<AddToDoProps> = ({ onAdd }) => {
+export const AddToDo: React.FC<AddToDoProps> = ({ onAdd }) => {
   const { t } = useTranslation()
   const [inputValue, setInputValue] = useState('')
   const { showSnackbar } = useSnackbarStore()
@@ -44,18 +44,18 @@ const AddToDoComponent: React.FC<AddToDoProps> = ({ onAdd }) => {
   }
 
   return (
-    <AddToDo.Container>
-      <AddToDo.Input
-        ref={input}
-        placeholder={t('addToDo.input.placeholder')}
-        onChange={handleOnChange}
-        onKeyDown={handleOnKeyDown}
-      />
-      <AddToDo.Button onClick={add}>
-        <Plus size={30} color={colors.tones.dark} />
-      </AddToDo.Button>
-    </AddToDo.Container>
+    <Styled.Container>
+      <Styled.Box>
+        <Styled.Input
+          ref={input}
+          placeholder={t('addToDo.input.placeholder')}
+          onChange={handleOnChange}
+          onKeyDown={handleOnKeyDown}
+        />
+        <Styled.Button onClick={add}>
+          <Plus size={30} color={colors.tones.dark} />
+        </Styled.Button>
+      </Styled.Box>
+    </Styled.Container>
   )
 }
-
-export { AddToDoComponent as AddToDo }

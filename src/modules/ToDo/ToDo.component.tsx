@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Archive } from 'react-bootstrap-icons'
+import { useTranslation } from 'react-i18next'
 import type { ToDoType } from 'common/types'
 import { useSnackbarStore } from 'components'
-import { t } from 'i18next'
 import { colors } from 'theme'
-import { ToDo } from './ToDo.styled'
+import { Styled } from './ToDo.styled'
 
 type ToDoProps = {
   index: number
@@ -13,7 +13,7 @@ type ToDoProps = {
   onEdit: (id: number, text: string) => void
 } & ToDoType
 
-export const ToDoComponent: React.FC<ToDoProps> = ({
+export const ToDo: React.FC<ToDoProps> = ({
   index,
   onToggle,
   onDelete,
@@ -22,6 +22,7 @@ export const ToDoComponent: React.FC<ToDoProps> = ({
   text,
   isCompleted
 }) => {
+  const { t } = useTranslation()
   const [inputValue, setInputValue] = useState(text)
   const { showSnackbar } = useSnackbarStore()
 
@@ -50,29 +51,29 @@ export const ToDoComponent: React.FC<ToDoProps> = ({
   }
 
   return (
-    <ToDo.Container isCompleted={isCompleted}>
-      <ToDo.Info>
+    <Styled.Container isCompleted={isCompleted}>
+      <Styled.Info>
         <small>{++index}.</small>
-        <ToDo.Input
+        <Styled.Input
           value={inputValue}
           isCompleted={isCompleted}
           disabled={isCompleted}
           onChange={handleOnChange}
           onKeyDown={handleOnKeyDown}
         />
-      </ToDo.Info>
+      </Styled.Info>
 
-      <ToDo.Actions>
-        <ToDo.DeleteButton onClick={deleteToDo}>
+      <Styled.Actions>
+        <Styled.DeleteButton onClick={deleteToDo}>
           <Archive size={28} color={colors.tones.dark} />
-        </ToDo.DeleteButton>
+        </Styled.DeleteButton>
 
-        <ToDo.Checkbox
+        <Styled.Checkbox
           type="checkbox"
           checked={isCompleted}
           onChange={toggleToDo}
         />
-      </ToDo.Actions>
-    </ToDo.Container>
+      </Styled.Actions>
+    </Styled.Container>
   )
 }

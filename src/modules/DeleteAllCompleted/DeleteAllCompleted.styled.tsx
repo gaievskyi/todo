@@ -34,7 +34,7 @@ const Button = styled.button<{ isVisible: boolean }>`
   `}
 `
 
-export const DeleteAllCompleted = {
+export const Styled = {
   Container,
   Button
 }

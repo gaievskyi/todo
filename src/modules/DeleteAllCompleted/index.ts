@@ -1,1 +1,1 @@
-export { DeleteAllCompletedComponent as DeleteAllCompleted } from './DeleteAllCompleted.component'
+export { DeleteAllCompleted } from './DeleteAllCompleted.component'

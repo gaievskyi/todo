@@ -5,12 +5,19 @@ import { colors } from 'theme'
 const Container = styled.div`
   position: fixed;
   bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
-  margin: 20px auto;
+  margin: 0 auto;
+  width: 100%;
+  height: 80px;
+`
+
+const Box = styled.div`
   display: flex;
-  place-items: center;
   gap: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.primary};
+  width: 100%;
+  height: 100%;
 `
 
 const Button = memo(styled.button`
@@ -31,8 +38,9 @@ const Input = styled.input`
   min-width: 250px;
 `
 
-export const AddToDo = {
+export const Styled = {
   Container,
+  Box,
   Button,
   Input
 }

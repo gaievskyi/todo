@@ -1,9 +1,11 @@
-import { t } from 'i18next'
+import { useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { AddToDo, DeleteAllCompleted, Empty, ToDo } from 'modules'
-import { ToDos } from './ToDos.styled'
+import { Styled } from './ToDos.styled'
 import { useToDos } from './useToDos.hook'
 
-export const ToDosComponent: React.FC = () => {
+export const ToDos: React.FC = () => {
+  const { t } = useTranslation()
   const {
     todos,
     isAnySelected,
@@ -12,14 +14,18 @@ export const ToDosComponent: React.FC = () => {
     delSelected,
     edit,
     add,
-    bottomRef
+    scrollBottomOnAdd
   } = useToDos()
+
+  const bottomRef = useRef(document.createElement('div'))
+
+  useEffect(() => scrollBottomOnAdd(bottomRef), [todos])
 
   return (
     <>
-      <ToDos.Container>
-        <ToDos.Title>{t('title')}</ToDos.Title>
-        <ToDos.Subtitle>{t('subtitle')}</ToDos.Subtitle>
+      <Styled.Container>
+        <Styled.Title>{t('title')}</Styled.Title>
+        <Styled.Subtitle>{t('subtitle')}</Styled.Subtitle>
         <DeleteAllCompleted
           onDeleteSelected={delSelected}
           isVisible={isAnySelected}
@@ -38,7 +44,7 @@ export const ToDosComponent: React.FC = () => {
           />
         ))}
         <AddToDo onAdd={add} />
-      </ToDos.Container>
+      </Styled.Container>
       <div ref={bottomRef} />
     </>
   )
