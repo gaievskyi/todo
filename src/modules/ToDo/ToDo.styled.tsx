@@ -8,7 +8,7 @@ const Container = styled.div<{ isCompleted: boolean }>`
   width: 100%;
   height: 100%;
   background-color: ${colors.tones.light};
-  padding: 20px;
+  padding: 0 20px;
   border: 2px solid ${colors.tones.dark};
   transition: all 0.25s ease;
 
@@ -49,6 +49,7 @@ const Input = styled.input<{ isCompleted: boolean }>`
   border: none;
   outline: none;
   background: none;
+  padding: 20px 0;
   width: 100%;
   height: 100%;
   ${({ isCompleted }) =>
