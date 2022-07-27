@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react'
 import { Plus } from 'react-bootstrap-icons'
 import { useTranslation } from 'react-i18next'
-import { useSnackbarStore } from 'components'
-import { colors } from 'theme'
-import { Styled } from './AddToDo.styled'
+import { colors } from 'common/theme'
+import { useSnackbarStore } from 'modules'
+import { Styled } from './add-to-do.styled'
 
 type AddToDoProps = {
   onAdd: (text: string) => void
@@ -16,21 +16,20 @@ export const AddToDo: React.FC<AddToDoProps> = ({ onAdd }) => {
 
   const input = useRef(document.createElement('input'))
 
-  const add = () => {
-    if (inputValue.trim().length === 0) {
-      showSnackbar({
-        variant: 'error',
-        message: t('addToDo.errors.empty')
-      })
-      return
-    }
-    onAdd(inputValue)
+  const isEmptyInput = inputValue.trim() === ''
+
+  const clearInput = () => {
     setInputValue('')
     input.current.value = ''
-    showSnackbar({
-      variant: 'success',
-      message: t('addToDo.success')
-    })
+  }
+
+  const add = () => {
+    if (isEmptyInput) {
+      showSnackbar({ variant: 'error', message: t('addToDo.errors.empty') })
+    }
+    onAdd(inputValue)
+    clearInput()
+    showSnackbar({ variant: 'success', message: t('addToDo.success') })
   }
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) =>

@@ -1,20 +1,19 @@
 import { useMedia } from 'common/hooks'
-import { useSnackbarStore } from './Snackbar.store'
-import { Snackbar } from './Snackbar.styled'
+import { useSnackbarStore } from './snackbar.store'
+import { Styled } from './snackbar.styled'
 
-const SnackbarComponent: React.FC = () => {
+export const Snackbar: React.FC = () => {
   const { variant, message, isOpen } = useSnackbarStore()
+
   const isSmallDevice = useMedia('(max-width: 900px)')
 
   return (
-    <Snackbar.Container
+    <Styled.Container
       isOpen={isOpen}
       variant={variant}
       isCompact={isSmallDevice}
     >
       <p style={{ width: '100%' }}>{message}</p>
-    </Snackbar.Container>
+    </Styled.Container>
   )
 }
-
-export { SnackbarComponent as Snackbar }

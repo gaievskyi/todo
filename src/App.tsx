@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { setHTMLAttrLangTag } from 'common/translations'
-import { SaveUkraine } from 'modules'
-import { ToDos } from 'modules/ToDos'
+import { SaveUkraine, ToDos } from 'modules'
 
 export const App: React.FC = () => {
   const { t, i18n } = useTranslation()
@@ -15,8 +14,8 @@ export const App: React.FC = () => {
 
   return (
     <>
-      <SaveUkraine />
       <ToDos />
+      <SaveUkraine />
     </>
   )
 }

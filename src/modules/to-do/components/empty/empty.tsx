@@ -1,6 +1,6 @@
 import { Check2All } from 'react-bootstrap-icons'
 import { useTranslation } from 'react-i18next'
-import { Styled } from './Empty.styled'
+import { Styled } from './empty.styled'
 
 export const Empty: React.FC = () => {
   const { t } = useTranslation()

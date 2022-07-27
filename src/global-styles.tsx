@@ -1,5 +1,5 @@
+import { colors } from 'common/theme'
 import { createGlobalStyle } from 'styled-components'
-import { colors } from 'theme'
 
 export const GlobalStyles = createGlobalStyle`
   :root {

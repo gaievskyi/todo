@@ -1,19 +1,19 @@
 import { useState } from 'react'
 import { Archive } from 'react-bootstrap-icons'
 import { useTranslation } from 'react-i18next'
-import type { ToDoType } from 'common/types'
-import { useSnackbarStore } from 'components'
-import { colors } from 'theme'
-import { Styled } from './ToDo.styled'
+import { colors } from 'common/theme'
+import type { TodoType } from 'common/types'
+import { useSnackbarStore } from 'modules'
+import { Styled } from './to-do.styled'
 
-type ToDoProps = {
+type TodoProps = {
   index: number
   onToggle: (id: number) => void
   onDelete: (id: number) => void
   onEdit: (id: number, text: string) => void
-} & ToDoType
+} & TodoType
 
-export const ToDo: React.FC<ToDoProps> = ({
+export const Todo: React.FC<TodoProps> = ({
   index,
   onToggle,
   onDelete,

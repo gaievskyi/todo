@@ -1,5 +1,5 @@
+import { colors } from 'common/theme'
 import styled from 'styled-components'
-import { colors } from 'theme'
 
 const Container = styled.div<{ isCompleted: boolean }>`
   display: flex;
@@ -34,6 +34,7 @@ const Info = styled.div`
   width: 90%;
   padding-right: 30px;
 `
+
 const Actions = styled.div`
   display: flex;
   align-items: center;

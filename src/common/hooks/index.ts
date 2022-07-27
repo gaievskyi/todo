@@ -1,1 +1,1 @@
-export * from './useMedia.hook'
+export * from './use-media.hook'

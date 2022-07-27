@@ -1,10 +1,10 @@
-import { ToDoType } from 'common/types'
+import { TodoType } from 'common/types'
 import { v4 as generateUniqueID } from 'uuid'
 import create from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 
 type ToDoState = {
-  todos: ToDoType[]
+  todos: TodoType[]
   addTodo: (text: string) => void
   deleteTodo: (id: number) => void
   toggleTodo: (id: number) => void
@@ -12,8 +12,9 @@ type ToDoState = {
   deleteSelected: () => void
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const store = (set: any) => ({
-  todos: [] as ToDoType[],
+  todos: [] as TodoType[],
 
   addTodo: (text: string) =>
     set((state: ToDoState) => ({

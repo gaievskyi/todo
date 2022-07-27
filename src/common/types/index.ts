@@ -1,1 +1,1 @@
-export * from './ToDo.type'
+export * from './todo.type'

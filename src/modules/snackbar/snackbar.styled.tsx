@@ -1,5 +1,5 @@
+import { colors } from 'common/theme'
 import styled from 'styled-components'
-import { colors } from 'theme'
 
 const Container = styled.div<{
   isOpen: boolean
@@ -55,6 +55,6 @@ const Container = styled.div<{
   }}
 `
 
-export const Snackbar = {
+export const Styled = {
   Container
 }

@@ -1,8 +1,8 @@
 import { Trash } from 'react-bootstrap-icons'
 import { useTranslation } from 'react-i18next'
-import { useSnackbarStore } from 'components'
-import { colors } from 'theme'
-import { Styled } from './DeleteAllCompleted.styled'
+import { colors } from 'common/theme'
+import { useSnackbarStore } from 'modules'
+import { Styled } from './delete-completed-todos.styled'
 
 type DeleteAllCompletedProps = {
   onDeleteSelected: () => void

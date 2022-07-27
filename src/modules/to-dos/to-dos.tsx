@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AddToDo, DeleteAllCompleted, Empty, ToDo } from 'modules'
-import { Styled } from './ToDos.styled'
-import { useToDos } from './useToDos.hook'
+import { Todo } from 'modules'
+import { AddToDo, DeleteAllCompleted, Empty } from 'modules/to-do/components'
+import { Styled } from './to-dos.styled'
+import { useToDos } from './use-to-dos.hook'
 
 export const ToDos: React.FC = () => {
   const { t } = useTranslation()
@@ -32,7 +33,7 @@ export const ToDos: React.FC = () => {
         />
         {todos.length === 0 && <Empty />}
         {todos.map((todo, index) => (
-          <ToDo
+          <Todo
             index={index}
             id={todo.id}
             key={todo.id}

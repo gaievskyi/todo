@@ -1,5 +1,5 @@
 import { MutableRefObject } from 'react'
-import { useStore } from './ToDos.store'
+import { useStore } from './to-dos.store'
 
 export const useToDos = () => {
   const { todos, addTodo, toggleTodo, deleteTodo, editTodo, deleteSelected } =

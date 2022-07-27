@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'common/translations'
-import { Snackbar } from 'components'
-import { App } from './App'
-import { GlobalStyles } from './globalStyles'
+import { Snackbar } from 'modules'
+import { App } from './app'
+import { GlobalStyles } from './global-styles'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
