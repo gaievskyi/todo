@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'common/translations'
 import { Snackbar } from 'modules'
-import { App } from './app'
+import { App } from './App'
 import { GlobalStyles } from './global-styles'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
