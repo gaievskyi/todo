@@ -1,4 +1,4 @@
-export const ukrainian = {
+export const Ukrainian = {
   title: 'To-do App',
   subtitle: 'Створіть свій план.',
   error: 'Виникла помилка.',

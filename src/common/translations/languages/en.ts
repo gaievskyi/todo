@@ -1,4 +1,4 @@
-export const english = {
+export const English = {
   title: 'To-do App',
   subtitle: 'Create your plan.',
   error: 'An error occurred.',

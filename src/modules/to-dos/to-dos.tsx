@@ -20,7 +20,9 @@ export const ToDos: React.FC = () => {
 
   const bottomRef = useRef(document.createElement('div'))
 
-  useEffect(() => scrollBottomOnAdd(bottomRef), [todos])
+  useEffect(() => {
+    scrollBottomOnAdd(bottomRef)
+  }, [todos])
 
   return (
     <>

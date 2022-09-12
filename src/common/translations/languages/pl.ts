@@ -1,4 +1,4 @@
-export const polish = {
+export const Polish = {
   title: 'To-do App',
   subtitle: 'Utwórz swój plan.',
   error: 'Wystąpił błąd.',
